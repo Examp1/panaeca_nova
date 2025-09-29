@@ -1,0 +1,11 @@
+html, body{
+scroll-behavior: smooth;
+}
+//All styles can be added here.
+.anchorBtn{
+  @apply text-xs py-1 px-2 w-fit flex items-center gap-1 border border-[#2D2926] rounded-[50px]
+}
+
+.active_tab{
+  @apply bg-[#CE0037] text-white;
+}
