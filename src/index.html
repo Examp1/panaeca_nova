@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Gulp with TailwindCSS v3</title>
+  <title>Panacea Nova</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" type="text/css" href="./css/style.css" />
@@ -13,12 +13,13 @@
 
 <body>
   <header
-    class="absolute left-1/2 top-4 -translate-x-1/2 container mx-auto h-[67px] bg-white/70 backdrop-blur-[8px] flex items-center rounded-3xl px-6 py-4 justify-between">
+    class="fixed z-50 left-1/2 top-4 -translate-x-1/2 container mx-auto h-[67px] bg-white/70 backdrop-blur-[8px] flex items-center rounded-3xl px-6 py-4 justify-between">
     <a href="/">
       <img src="/img/logo.png" alt="">
     </a>
-    <nav>
-      <ul class="flex gap-2">
+    <!-- hidden xl:block -->
+    <nav class="menu transition-all">
+      <ul class="flex gap-2 flex-col xl:flex-row">
         <li class="py-2 px-4 rounded-xl border border-[#2D2926]">
           <a href="#aboutUs">Про нас</a>
         </li>
@@ -39,24 +40,30 @@
         </li>
       </ul>
     </nav>
-    <a href="#" class="py-2 px-4 rounded-xl text-white bg-[#CE0037] font-medium">Записатись на прийом</a>
+    <div class="flex items-center gap-2">
+      <a href="#form" class="hidden md:block py-2 px-4 rounded-xl text-white bg-[#CE0037] font-medium">Записатись на
+      прийом</a>
+    <div class="block xl:hidden text-2xl mdi mdi-menu"></div>
+    </div>
   </header>
   <main>
     <!-- first Screen -->
-    <div id="first-screen" class="bg-[#2D2926] h-screen">
+    <div id="first-screen" class="bg-[#2D2926] h-screen relative overflow-hidden">
       <div class="container mx-auto flex justify-between items-center h-full">
-        <div>
+        <div class="relative z-10 mt-[60px] lg:mt-0 ">
           <h1 class="text-[40px] text-white font-semibold">Медична клініка Панацея Нова</h1>
           <p class="text-2xl text-white">Ваш шлях до здоров'я та благополуччя
           </p>
-          <a href="#" class="mt-10 inline-block py-2 px-4 rounded-xl text-2xl text-white bg-[#CE0037]">Записатись на
+          <a href="#form"
+            class="mt-10 inline-block py-2 px-4 rounded-xl text-base md:text-2xl text-white bg-[#CE0037]">Записатись на
             прийом</a>
         </div>
-        <img class="aspect-square" src="img/first-screen-image.png" alt="">
+        <img class="absolute z-0 w-full inset-0 object-cover  xl:static xl:w-auto aspect-square"
+          src="img/first-screen-image.png" alt="">
       </div>
     </div>
     <!-- about us -->
-    <div class="container mx-auto my-20 grid grid-cols-[1fr_630px] gap-20">
+    <div class="container mx-auto my-20 grid  grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[1fr_630px] gap-20">
       <div class="flex flex-col justify-center">
         <div id="aboutUs" class="anchorBtn">
           <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Про нас
@@ -73,7 +80,7 @@
           </p>
         </div>
       </div>
-      <img src="https://placehold.co/628x420" class="rounded-[32px]" alt="">
+      <img src="https://placehold.co/628x420" class="rounded-[32px] w-full" alt="">
     </div>
     <!-- services -->
     <div class="container mx-auto my-20 ">
@@ -91,7 +98,7 @@
           </p>
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3  gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
         <div class="relative bg-[#E3E4E5] rounded-3xl overflow-hidden flex items-center">
           <img class="max-h-[150px] object-cover" src="https://placehold.co/500x200" alt="">
           <div
@@ -136,8 +143,8 @@
         </div>
       </div>
     </div>
-    <!-- services -->
-    <div class="container mx-auto my-20 ">
+    <!-- doctors -->
+    <daiv class="container mx-auto my-20 ">
       <div class="flex flex-col justify-center max-w-[600px] mb-6">
         <div id="doctors" class="anchorBtn">
           <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Лікарі
@@ -160,7 +167,7 @@
 
           <div class="swiper-wrapper">
             <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
-              <img class="max-w-[262px] aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
               <div class="mt-6 flex flex-col gap-6">
                 <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
                 <div class="flex flex-col gap-4">
@@ -171,7 +178,7 @@
               </div>
             </div>
             <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
-              <img class="max-w-[262px] aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
               <div class="mt-6 flex flex-col gap-6">
                 <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
                 <div class="flex flex-col gap-4">
@@ -182,7 +189,7 @@
               </div>
             </div>
             <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
-              <img class="max-w-[262px] aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
               <div class="mt-6 flex flex-col gap-6">
                 <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
                 <div class="flex flex-col gap-4">
@@ -193,7 +200,7 @@
               </div>
             </div>
             <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
-              <img class="max-w-[262px] aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
               <div class="mt-6 flex flex-col gap-6">
                 <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
                 <div class="flex flex-col gap-4">
@@ -204,7 +211,7 @@
               </div>
             </div>
             <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
-              <img class="max-w-[262px] aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
               <div class="mt-6 flex flex-col gap-6">
                 <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
                 <div class="flex flex-col gap-4">
@@ -215,7 +222,7 @@
               </div>
             </div>
             <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
-              <img class="max-w-[262px] w-full aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
               <div class="mt-6 flex flex-col gap-6">
                 <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
                 <div class="flex flex-col gap-4">
@@ -226,7 +233,7 @@
               </div>
             </div>
             <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
-              <img class="max-w-[262px] aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
               <div class="mt-6 flex flex-col gap-6">
                 <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
                 <div class="flex flex-col gap-4">
@@ -243,7 +250,7 @@
           class="absolute top-1/2 rounded-full cursor-pointer -right-[50px] button-next w-10 h-10 bg-[#A2A2A2] mdi mdi-chevron-right flex items-center justify-center text-[20px]">
         </div>
       </div>
-    </div>
+    </daiv>
     <!-- devices -->
     <div class="container mx-auto my-20 ">
       <div class="flex flex-col justify-center max-w-[600px] mb-6">
@@ -260,7 +267,7 @@
           </p>
         </div>
       </div>
-      <div class="columns-1 sm:columns-2 lg:columns-4 gap-4 p-4">
+      <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
         <div class="break-inside-avoid mb-4">
           <img src="https://placehold.co/400x200" class="w-full rounded-lg shadow" />
         </div>
@@ -308,40 +315,45 @@
         <div class="tab_btn py-3 px-4 cursor-pointer font-medium">Дослідження</div>
       </div>
       <div class="mt-6 bg-[#FAFAFB] rounded-2xl overflow-hidden">
-        <div class="py-4 px-8 bg-[#E3E4E5] rounded-2xl grid grid-cols-[1fr_3fr_0.5fr] gap-6">
-          <span class="font-medium">Назва</span>
-          <span class="font-medium">Опис</span>
+        <div class="py-4 px-8 bg-[#E3E4E5] rounded-2xl grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-6">
+          <span class="font-medium hidden md:block">Назва</span>
+          <span class="font-medium block md:hidden">Назва/Ціна</span>
+          <span class="font-medium hidden md:block">Опис</span>
           <span class="font-medium">Ціна</span>
         </div>
-        <div class="py-4 px-8 bg-[#FAFAFB] grid grid-cols-[1fr_3fr_0.5fr] gap-6 border-b border-[E3E4E5]">
-          <span>Назва 1</span>
+        <div
+          class="table-item py-4 px-8 bg-[#FAFAFB] grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-4 md:gap-6 border-b border-[E3E4E5]">
+          <span class="font-medium">Назва 1</span>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi
             diam purus, blandit luctus ornare a, tempor porttitor dui.</span>
-          <span>1 000 ₴</span>
+          <span class="font-medium">1 000 ₴</span>
         </div>
-        <div class="py-4 px-8 bg-[#FAFAFB] grid grid-cols-[1fr_3fr_0.5fr] gap-6 border-b border-[E3E4E5]">
-          <span>Назва 1</span>
+        <div
+          class="table-item py-4 px-8 bg-[#FAFAFB] grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-4 md:gap-6 border-b border-[E3E4E5]">
+          <span class="font-medium">Назва 1</span>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi
             diam purus, blandit luctus ornare a, tempor porttitor dui.</span>
-          <span>1 000 ₴</span>
+          <span class="font-medium">1 000 ₴</span>
         </div>
-        <div class="py-4 px-8 bg-[#FAFAFB] grid grid-cols-[1fr_3fr_0.5fr] gap-6 border-b border-[E3E4E5]">
-          <span>Назва 1</span>
+        <div
+          class="table-item py-4 px-8 bg-[#FAFAFB] grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-4 md:gap-6 border-b border-[E3E4E5]">
+          <span class="font-medium">Назва 1</span>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi
             diam purus, blandit luctus ornare a, tempor porttitor dui.</span>
-          <span>1 000 ₴</span>
+          <span class="font-medium">1 000 ₴</span>
         </div>
-        <div class="py-4 px-8 bg-[#FAFAFB] grid grid-cols-[1fr_3fr_0.5fr] gap-6">
-          <span>Назва 1</span>
+        <div class="table-item py-4 px-8 bg-[#FAFAFB] grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-4 md:gap-6">
+          <span class="font-medium">Назва 1</span>
           <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi
             diam purus, blandit luctus ornare a, tempor porttitor dui.</span>
-          <span>1 000 ₴</span>
+          <span class="font-medium">1 000 ₴</span>
         </div>
       </div>
     </div>
     <!-- form -->
-    <div class="my-20">
-      <div class="container mx-auto py-[90px] px-[56px] bg-[#2D2926] rounded-[56px] grid grid-cols-2 gap-[48px]">
+    <div id="form" class="my-20">
+      <div
+        class="container mx-auto py-[90px] px-[56px] bg-[#2D2926] rounded-[56px] grid grid-cols-1 lg:grid-cols-2 gap-[48px]">
         <div>
           <h2 class="text-20px font-semibold text-white">
             H2 - Inter Tight, Medium, 20px
@@ -351,7 +363,7 @@
             purus, blandit luctus ornare a, tempor porttitor dui
           </p>
           <form class="mt-6">
-            <div class="grid grid-cols-2 gap-3">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
               <input class="rounded-xl bg-white p-4" placeholder="Прізвище *" required type="text">
               <input class="rounded-xl bg-white p-4" placeholder="Ім’я *" required type="text">
               <input class="rounded-xl bg-white p-4" placeholder="Номер телефону *" required type="text">
@@ -363,7 +375,8 @@
             <button class="mt-8 py-3 px-6 rounded-xl text-white bg-[#CE0037] font-medium">Відправити</button>
           </form>
         </div>
-        <img class="rounded-[32px] object-cover aspect-square" src="https://placehold.co/640x549" alt="">
+        <img class="hidden lg:block rounded-[32px] object-cover aspect-square" src="https://placehold.co/640x549"
+          alt="">
       </div>
     </div>
     <!-- faq -->
@@ -373,7 +386,7 @@
           <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Поширені запитання
         </div>
       </div>
-      <div class="grid grid-cols-[3fr_1fr] gap-20">
+      <div class="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-20">
         <div class="accordion">
           <div class="accordion-item border-b border-[#2D2926/50] cursor-pointer">
             <div class="accordion-trigger text-[18px] font-semibold pt-4 pb-[18px] flex justify-between items-center">
@@ -397,15 +410,16 @@
               accumsan rhoncus. Morbi diam purus, blandit luctus ornare a, tempor porttitor dui.</div>
           </div>
         </div>
-        <img class="rounded-[32px] object-cover aspect-square" src="https://placehold.co/640x549" alt="">
+        <img class="hidden lg:block rounded-[32px] object-cover aspect-square" src="https://placehold.co/640x549"
+          alt="">
       </div>
     </div>
   </main>
   <footer class="py-8 bg-[#2D2926]">
-    <div class="container mx-auto grid grid-cols-2 gap-6">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.4fr] xl:grid-cols-2 gap-6">
       <div>
         <img src="/img/logo-white.png" alt="">
-        <div class="grid grid-cols-2 mt-10 text-white">
+        <div class="grid grid-cols-1 gap-6 md:gap-1 md:grid-cols-2 mt-10 text-white">
           <div class="flex flex-col gap-4">
             <h3 class="text-[18px] font-semibold">
               Наші контакти
@@ -418,7 +432,8 @@
               <a href="#tel:380977005159">+380977005159</a>
               <a href="#tel:380637005159">+380637005159</a>
             </div>
-            <a class="flex items-center gap-1" href="mailto:info@panacea-nova.com.ua"><span class="text-[25px] mdi mdi-email-outline"></span>
+            <a class="flex items-center gap-1" href="mailto:info@panacea-nova.com.ua"><span
+                class="text-[25px] mdi mdi-email-outline"></span>
               info@panacea-nova.com.ua</a>
           </div>
           <div class="flex flex-col gap-4">
