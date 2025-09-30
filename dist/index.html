@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Panacea Nova</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="./css/style.css" />
+</head>
+
+<body>
+  <header
+    class="fixed z-50 left-1/2 top-4 -translate-x-1/2 container mx-auto h-[67px] bg-white/70 backdrop-blur-[8px] flex items-center rounded-3xl px-6 py-4 justify-between">
+    <a href="/">
+      <img src="/img/logo.png" alt="">
+    </a>
+    <!-- hidden xl:block -->
+    <nav class="menu transition-all">
+      <ul class="flex gap-2 flex-col xl:flex-row">
+        <li class="py-2 px-4 rounded-xl border border-[#2D2926]">
+          <a href="#aboutUs">Про нас</a>
+        </li>
+        <li class="py-2 px-4 rounded-xl border border-[#2D2926]">
+          <a href="#services">Послуги</a>
+        </li>
+        <li class="py-2 px-4 rounded-xl border border-[#2D2926]">
+          <a href="#doctors">Лікарі</a>
+        </li>
+        <li class="py-2 px-4 rounded-xl border border-[#2D2926]">
+          <a href="#equipment">Апаратура</a>
+        </li>
+        <li class="py-2 px-4 rounded-xl border border-[#2D2926]">
+          <a href="#prices">Ціни</a>
+        </li>
+        <li class="py-2 px-4 rounded-xl border border-[#2D2926]">
+          <a href="#faq">Поширені запитання</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="#form" class="hidden md:block py-2 px-4 rounded-xl text-white bg-[#CE0037] font-medium">Записатись на
+      прийом</a>
+    <div class="block xl:hidden text-2xl mdi mdi-menu"></div>
+    </div>
+  </header>
+  <main>
+    <!-- first Screen -->
+    <div id="first-screen" class="bg-[#2D2926] h-screen relative overflow-hidden">
+      <div class="container mx-auto flex justify-between items-center h-full">
+        <div class="relative z-10 mt-[60px] lg:mt-0 ">
+          <h1 class="text-[40px] text-white font-semibold">Медична клініка Панацея Нова</h1>
+          <p class="text-2xl text-white">Ваш шлях до здоров'я та благополуччя
+          </p>
+          <a href="#form"
+            class="mt-10 inline-block py-2 px-4 rounded-xl text-base md:text-2xl text-white bg-[#CE0037]">Записатись на
+            прийом</a>
+        </div>
+        <img class="absolute z-0 w-full inset-0 object-cover  xl:static xl:w-auto aspect-square"
+          src="img/first-screen-image.png" alt="">
+      </div>
+    </div>
+    <!-- about us -->
+    <div class="container mx-auto my-20 grid  grid-cols-1 lg:grid-cols-2 2xl:grid-cols-[1fr_630px] gap-20">
+      <div class="flex flex-col justify-center">
+        <div id="aboutUs" class="anchorBtn">
+          <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Про нас
+        </div>
+        <div class="mt-6">
+          <h2 class="text-20px font-semibold">
+            H2 - Inter Tight, Medium, 20px
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi diam
+            purus, blandit luctus ornare a, tempor porttitor dui. Maecenas euismod nisl ut erat semper, ac tristique
+            tellus feugiat. Donec consectetur aliquet augue quis mattis. Donec vehicula vitae nisl ut faucibus. Donec in
+            elementum velit. Donec elementum arcu nec dolor sodales, vitae porta felis mattis.
+          </p>
+        </div>
+      </div>
+      <img src="https://placehold.co/628x420" class="rounded-[32px] w-full" alt="">
+    </div>
+    <!-- services -->
+    <div class="container mx-auto my-20 ">
+      <div class="flex flex-col justify-center max-w-[600px] mb-6">
+        <div id="services" class="anchorBtn">
+          <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Послуги
+        </div>
+        <div class="mt-6">
+          <h2 class="text-20px font-semibold">
+            H2 - Inter Tight, Medium, 20px
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi diam
+            purus, blandit luctus ornare a, tempor porttitor dui
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6">
+        <div class="relative bg-[#E3E4E5] rounded-3xl overflow-hidden flex items-center">
+          <img class="max-h-[150px] object-cover" src="https://placehold.co/500x200" alt="">
+          <div
+            class="absolute h-full w-[55%] right-0 backdrop-blur-md bg-[#E3E4E5]/50 flex items-center p-2.5 text-lg font-medium">
+            Послуга 1
+          </div>
+        </div>
+        <div class="relative bg-[#E3E4E5] rounded-3xl overflow-hidden flex items-center">
+          <img class="max-h-[150px] object-cover" src="https://placehold.co/500x200" alt="">
+          <div
+            class="absolute h-full w-[55%] right-0 backdrop-blur-md bg-[#E3E4E5]/50 flex items-center p-2.5 text-lg font-medium">
+            Послуга 2
+          </div>
+        </div>
+        <div class="relative bg-[#E3E4E5] rounded-3xl overflow-hidden flex items-center">
+          <img class="max-h-[150px] object-cover" src="https://placehold.co/500x200" alt="">
+          <div
+            class="absolute h-full w-[55%] right-0 backdrop-blur-md bg-[#E3E4E5]/50 flex items-center p-2.5 text-lg font-medium">
+            Послуга 3
+          </div>
+        </div>
+        <div class="relative bg-[#E3E4E5] rounded-3xl overflow-hidden flex items-center">
+          <img class="max-h-[150px] object-cover" src="https://placehold.co/500x200" alt="">
+          <div
+            class="absolute h-full w-[55%] right-0 backdrop-blur-md bg-[#E3E4E5]/50 flex items-center p-2.5 text-lg font-medium">
+            Послуга 4
+          </div>
+        </div>
+        <div class="relative bg-[#E3E4E5] rounded-3xl overflow-hidden flex items-center">
+          <img class="max-h-[150px] object-cover" src="https://placehold.co/500x200" alt="">!
+          <div
+            class="absolute h-full w-[55%] right-0 backdrop-blur-md bg-[#E3E4E5]/50 flex items-center p-2.5 text-lg font-medium">
+            Послуга 5
+          </div>
+        </div>
+        <div class="relative bg-[#E3E4E5] rounded-3xl overflow-hidden flex items-center">
+          <img class="max-h-[150px] object-cover" src="https://placehold.co/500x200" alt="">
+          <div
+            class="absolute h-full w-[55%] right-0 backdrop-blur-md bg-[#E3E4E5]/50 flex items-center p-2.5 text-lg font-medium">
+            Послуга 6
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- doctors -->
+    <div class="container mx-auto my-20 ">
+      <div class="flex flex-col justify-center max-w-[600px] mb-6">
+        <div id="doctors" class="anchorBtn">
+          <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Лікарі
+        </div>
+        <div class="mt-6">
+          <h2 class="text-20px font-semibold">
+            H2 - Inter Tight, Medium, 20px
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi diam
+            purus, blandit luctus ornare a, tempor porttitor dui
+          </p>
+        </div>
+      </div>
+      <div class="w-[calc(100%-100px)] mx-auto relative">
+        <div
+          class="absolute top-1/2 rounded-full cursor-pointer -left-[50px] button-prev w-10 h-10 bg-[#A2A2A2] mdi mdi-chevron-left flex items-center justify-center text-[20px]">
+        </div>
+        <div class="swiper relative">
+
+          <div class="swiper-wrapper">
+            <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <div class="mt-6 flex flex-col gap-6">
+                <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
+                <div class="flex flex-col gap-4">
+                  <p>Спеціалізація: лікар-уролог</p>
+                  <p>Досвід роботи: 9 років</p>
+                  <p>Напрями діяльності: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <div class="mt-6 flex flex-col gap-6">
+                <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
+                <div class="flex flex-col gap-4">
+                  <p>Спеціалізація: лікар-уролог</p>
+                  <p>Досвід роботи: 9 років</p>
+                  <p>Напрями діяльності: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <div class="mt-6 flex flex-col gap-6">
+                <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
+                <div class="flex flex-col gap-4">
+                  <p>Спеціалізація: лікар-уролог</p>
+                  <p>Досвід роботи: 9 років</p>
+                  <p>Напрями діяльності: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <div class="mt-6 flex flex-col gap-6">
+                <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
+                <div class="flex flex-col gap-4">
+                  <p>Спеціалізація: лікар-уролог</p>
+                  <p>Досвід роботи: 9 років</p>
+                  <p>Напрями діяльності: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <div class="mt-6 flex flex-col gap-6">
+                <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
+                <div class="flex flex-col gap-4">
+                  <p>Спеціалізація: лікар-уролог</p>
+                  <p>Досвід роботи: 9 років</p>
+                  <p>Напрями діяльності: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <div class="mt-6 flex flex-col gap-6">
+                <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
+                <div class="flex flex-col gap-4">
+                  <p>Спеціалізація: лікар-уролог</p>
+                  <p>Досвід роботи: 9 років</p>
+                  <p>Напрями діяльності: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide p-6 rounded-3xl border border-[#2D2926]">
+              <img class="aspect-square object-cover" src="https://placehold.co/628x420" alt="">
+              <div class="mt-6 flex flex-col gap-6">
+                <div class="text-lg font-semibold text-[#2D2926]">Прізвище, ім’я, по батькові</div>
+                <div class="flex flex-col gap-4">
+                  <p>Спеціалізація: лікар-уролог</p>
+                  <p>Досвід роботи: 9 років</p>
+                  <p>Напрями діяльності: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination absolute"></div>
+        </div>
+        <div
+          class="absolute top-1/2 rounded-full cursor-pointer -right-[50px] button-next w-10 h-10 bg-[#A2A2A2] mdi mdi-chevron-right flex items-center justify-center text-[20px]">
+        </div>
+      </div>
+    </div>
+    <!-- devices -->
+    <div class="container mx-auto my-20 ">
+      <div class="flex flex-col justify-center max-w-[600px] mb-6">
+        <div id="equipment" class="anchorBtn">
+          <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Апаратура
+        </div>
+        <div class="mt-6">
+          <h2 class="text-20px font-semibold">
+            H2 - Inter Tight, Medium, 20px
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi diam
+            purus, blandit luctus ornare a, tempor porttitor dui
+          </p>
+        </div>
+      </div>
+      <div class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4">
+        <div class="break-inside-avoid mb-4">
+          <img src="https://placehold.co/400x200" class="w-full rounded-lg shadow" />
+        </div>
+        <div class="break-inside-avoid mb-4">
+          <img src="https://placehold.co/400x300" class="w-full rounded-lg shadow" />
+        </div>
+        <div class="break-inside-avoid mb-4">
+          <img src="https://placehold.co/400x250" class="w-full rounded-lg shadow" />
+        </div>
+        <div class="break-inside-avoid mb-4">
+          <img src="https://placehold.co/400x350" class="w-full rounded-lg shadow" />
+        </div>
+        <div class="break-inside-avoid mb-4">
+          <img src="https://placehold.co/400x150" class="w-full rounded-lg shadow" />
+        </div>
+        <div class="break-inside-avoid mb-4">
+          <img src="https://placehold.co/400x400" class="w-full rounded-lg shadow" />
+        </div>
+        <div class="break-inside-avoid mb-4">
+          <img src="https://placehold.co/400x280" class="w-full rounded-lg shadow" />
+        </div>
+        <div class="break-inside-avoid mb-4">
+          <img src="https://placehold.co/400x180" class="w-full rounded-lg shadow" />
+        </div>
+      </div>
+    </div>
+    <!-- prices -->
+    <div class="container mx-auto my-20">
+      <div class="flex flex-col justify-center max-w-[600px] mb-6">
+        <div id="prices" class="anchorBtn">
+          <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Ціни
+        </div>
+        <div class="mt-6">
+          <h2 class="text-20px font-semibold">
+            H2 - Inter Tight, Medium, 20px
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi diam
+            purus, blandit luctus ornare a, tempor porttitor dui
+          </p>
+        </div>
+      </div>
+      <div class="w-fit flex rounded-xl bg-[#E3E4E5] gap-2 overflow-hidden">
+        <div class="tab_btn py-3 px-4 cursor-pointer font-medium active_tab"> Послуги</div>
+        <div class="tab_btn py-3 px-4 cursor-pointer font-medium">Дослідження</div>
+      </div>
+      <div class="mt-6 bg-[#FAFAFB] rounded-2xl overflow-hidden">
+        <div class="py-4 px-8 bg-[#E3E4E5] rounded-2xl grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-6">
+          <span class="font-medium hidden md:block">Назва</span>
+          <span class="font-medium block md:hidden">Назва/Ціна</span>
+          <span class="font-medium hidden md:block">Опис</span>
+          <span class="font-medium">Ціна</span>
+        </div>
+        <div
+          class="table-item py-4 px-8 bg-[#FAFAFB] grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-4 md:gap-6 border-b border-[E3E4E5]">
+          <span class="font-medium">Назва 1</span>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi
+            diam purus, blandit luctus ornare a, tempor porttitor dui.</span>
+          <span class="font-medium">1 000 ₴</span>
+        </div>
+        <div
+          class="table-item py-4 px-8 bg-[#FAFAFB] grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-4 md:gap-6 border-b border-[E3E4E5]">
+          <span class="font-medium">Назва 1</span>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi
+            diam purus, blandit luctus ornare a, tempor porttitor dui.</span>
+          <span class="font-medium">1 000 ₴</span>
+        </div>
+        <div
+          class="table-item py-4 px-8 bg-[#FAFAFB] grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-4 md:gap-6 border-b border-[E3E4E5]">
+          <span class="font-medium">Назва 1</span>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi
+            diam purus, blandit luctus ornare a, tempor porttitor dui.</span>
+          <span class="font-medium">1 000 ₴</span>
+        </div>
+        <div class="table-item py-4 px-8 bg-[#FAFAFB] grid grid-cols-2 md:grid-cols-[1fr_3fr_0.5fr] gap-4 md:gap-6">
+          <span class="font-medium">Назва 1</span>
+          <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi
+            diam purus, blandit luctus ornare a, tempor porttitor dui.</span>
+          <span class="font-medium">1 000 ₴</span>
+        </div>
+      </div>
+    </div>
+    <!-- form -->
+    <div id="form" class="my-20">
+      <div
+        class="container mx-auto py-[90px] px-[56px] bg-[#2D2926] rounded-[56px] grid grid-cols-1 lg:grid-cols-2 gap-[48px]">
+        <div>
+          <h2 class="text-20px font-semibold text-white">
+            H2 - Inter Tight, Medium, 20px
+          </h2>
+          <p class="text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel mi eu ipsum accumsan rhoncus. Morbi diam
+            purus, blandit luctus ornare a, tempor porttitor dui
+          </p>
+          <form class="mt-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <input class="rounded-xl bg-white p-4" placeholder="Прізвище *" required type="text">
+              <input class="rounded-xl bg-white p-4" placeholder="Ім’я *" required type="text">
+              <input class="rounded-xl bg-white p-4" placeholder="Номер телефону *" required type="text">
+              <input class="rounded-xl bg-white p-4" placeholder="Пошта *" required type="text">
+            </div>
+            <input class="mt-3 w-full rounded-xl bg-white p-4" placeholder="Направлення *" required type="text">
+            <textarea class="min-h-[120px] mt-3 w-full rounded-xl bg-white p-4" placeholder="Коментар"
+              name=""></textarea>
+            <button class="mt-8 py-3 px-6 rounded-xl text-white bg-[#CE0037] font-medium">Відправити</button>
+          </form>
+        </div>
+        <img class="hidden lg:block rounded-[32px] object-cover aspect-square" src="https://placehold.co/640x549"
+          alt="">
+      </div>
+    </div>
+    <!-- faq -->
+    <div class="container mx-auto my-20">
+      <div class="flex flex-col justify-center max-w-[600px] mb-6">
+        <div id="faq" class="anchorBtn">
+          <span class="rounded-full bg-[#CE0037] h-[8px] w-[8px] block"></span> Поширені запитання
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-20">
+        <div class="accordion">
+          <div class="accordion-item border-b border-[#2D2926/50] cursor-pointer">
+            <div class="accordion-trigger text-[18px] font-semibold pt-4 pb-[18px] flex justify-between items-center">
+              Питання 1 <span class="mdi mdi-chevron-down text-[30px]"></span></div>
+            <div class="accordion-content transition-all">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vel mi eu ipsum
+              accumsan rhoncus. Morbi diam purus, blandit luctus ornare a, tempor porttitor dui.</div>
+          </div>
+          <div class="accordion-item border-b border-[#2D2926/50] cursor-pointer">
+            <div class="accordion-trigger text-[18px] font-semibold pt-4 pb-[18px] flex justify-between items-center">
+              Питання 2<span class="mdi mdi-chevron-down text-[30px]"></span></div>
+            <div class="accordion-content transition-all">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vel mi eu ipsum
+              accumsan rhoncus. Morbi diam purus, blandit luctus ornare a, tempor porttitor dui.</div>
+          </div>
+          <div class="accordion-item border-b border-[#2D2926/50] cursor-pointer">
+            <div class="accordion-trigger text-[18px] font-semibold pt-4 pb-[18px] flex justify-between items-center">
+              Питання 3 <span class="mdi mdi-chevron-down text-[30px]"></span></div>
+            <div class="accordion-content transition-all">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+              vel mi eu ipsum
+              accumsan rhoncus. Morbi diam purus, blandit luctus ornare a, tempor porttitor dui.</div>
+          </div>
+        </div>
+        <img class="hidden lg:block rounded-[32px] object-cover aspect-square" src="https://placehold.co/640x549"
+          alt="">
+      </div>
+    </div>
+  </main>
+  <footer class="py-8 bg-[#2D2926]">
+    <div class="container mx-auto grid grid-cols-1 lg:grid-cols-[1fr_0.4fr] xl:grid-cols-2 gap-6">
+      <div>
+        <img src="/img/logo-white.png" alt="">
+        <div class="grid grid-cols-1 gap-6 md:gap-1 md:grid-cols-2 mt-10 text-white">
+          <div class="flex flex-col gap-4">
+            <h3 class="text-[18px] font-semibold">
+              Наші контакти
+            </h3>
+            <p class="flex items-center gap-1">
+              <span class="text-[25px] mdi mdi-map-marker-outline"></span> м. Київ, пров. Леопольда Ященка 12
+            </p>
+            <div class="flex items-center gap-1">
+              <span class="text-[25px] mdi mdi-phone-outline"></span>
+              <a href="#tel:380977005159">+380977005159</a>
+              <a href="#tel:380637005159">+380637005159</a>
+            </div>
+            <a class="flex items-center gap-1" href="mailto:info@panacea-nova.com.ua"><span
+                class="text-[25px] mdi mdi-email-outline"></span>
+              info@panacea-nova.com.ua</a>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div>
+              <h3 class="text-[18px] font-semibold">
+                Наші соцмережі
+              </h3>
+              <div class="flex gap-4 mt-4">
+                <a href="#"><img src="/img/fb.svg" alt=""></a>
+                <a href="#">
+                  <img src="/img/inst.svg" alt=""></a>
+                <a href="#"><img src="/img/tt.svg" alt=""></a>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-[18px] font-semibold">
+                Підтримка
+              </h3>
+              <div class="flex gap-4 mt-4">
+                <a href="#"><img src="/img/tg.svg" alt=""></a>
+                <a href="#">
+                  <img src="/img/wb.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <img src="https://placehold.co/788x271" alt="">
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  <script type="module" src="./js/scripts.js"></script>
+</body>
+
+</html>
