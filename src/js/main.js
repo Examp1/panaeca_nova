@@ -11,5 +11,12 @@ window.addEventListener("DOMContentLoaded", () => {
   btnPrev.addEventListener('click', () => {
     swiper.slidePrev();
   })
-  
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  accordionItems.forEach((item) => {
+    const trigger = item.querySelector('.accordion-trigger');
+    const content = item.querySelector('.accordion-content');
+    trigger.addEventListener('click', () => {
+      item.classList.toggle('active');
+    })
+  })
 });

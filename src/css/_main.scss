@@ -9,3 +9,19 @@ scroll-behavior: smooth;
 .active_tab{
   @apply bg-[#CE0037] text-white;
 }
+.accordion-item{
+  .accordion-content{
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+  }
+  &.active{
+    .accordion-content{
+      opacity: 1;
+      visibility: visible;
+      max-height: 1000px;
+      padding-bottom: 10px;
+    }
+  }
+}
