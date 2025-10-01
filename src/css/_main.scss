@@ -57,7 +57,7 @@ scroll-behavior: smooth;
 .menu{
 
   @media (max-width: 1280px){
-    @apply absolute right-0 top-full mt-4 bg-white/70 backdrop-blur-[8px] rounded-3xl px-6 py-4;
+    @apply absolute right-0 top-full mt-4 bg-white shadow-md rounded-3xl px-6 py-4;
     opacity: 0;
     visibility: hidden;
   }
