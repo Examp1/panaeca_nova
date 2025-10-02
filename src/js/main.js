@@ -1,4 +1,15 @@
 window.addEventListener("DOMContentLoaded", () => {
+    const phoneInputs = document.querySelectorAll('input[type="tel"]');
+
+    if (phoneInputs.length > 0) {
+        const maskOptions = {
+            mask: "+{380}-000-000-000",
+        };
+        phoneInputs.forEach((input) => {
+            IMask(input, maskOptions);
+        })
+    }
+
     const btnPrev = document.querySelector(".button-prev");
     const btnNext = document.querySelector(".button-next");
     const swiper = new Swiper(".swiper", {
@@ -41,6 +52,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const TOKEN = "8215513895:AAH1TPKJE0eUWDhvEzi7Y_e5IzN7cv3XGt8";
     const CHAT_ID = "-1002727283828";
     const URL_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+    const formBlock = document.getElementById("formBlock");
+    const successBlock = document.getElementById("successBlock");
 
     tgForm.addEventListener("submit", (e) => {
         e.preventDefault(); // чтобы страница не перезагружалась
@@ -66,6 +79,8 @@ window.addEventListener("DOMContentLoaded", () => {
             .then((res) => res.json())
             .then(() => {
                 tgForm.reset();
+                formBlock.classList.add("hide");
+                successBlock.classList.remove("hide").add("show");
             })
             .catch((err) => console.error("Ошибка:", err));
     });

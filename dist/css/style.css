@@ -734,6 +734,12 @@ select {
 .mt-8 {
   margin-top: 2rem;
 }
+.mt-\[10px\] {
+  margin-top: 10px;
+}
+.mt-\[16px\] {
+  margin-top: 16px;
+}
 .mt-\[60px\] {
   margin-top: 60px;
 }
@@ -982,11 +988,18 @@ select {
   font-size: 1.5rem;
   line-height: 2rem;
 }
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
 .text-\[18px\] {
   font-size: 18px;
 }
 .text-\[20px\] {
   font-size: 20px;
+}
+.text-\[24px\] {
+  font-size: 24px;
 }
 .text-\[25px\] {
   font-size: 25px;
@@ -1007,6 +1020,9 @@ select {
 }
 .font-medium {
   font-weight: 500;
+}
+.font-normal {
+  font-weight: 400;
 }
 .font-semibold {
   font-weight: 600;
@@ -1134,6 +1150,17 @@ html, body {
   opacity: 1;
   visibility: visible;
 }
+
+#formBlock, #successBlock {
+  transition: all 0.5s ease-in-out;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+}
+
 @media (min-width: 768px) {
 
   .md\:block {
@@ -1169,6 +1196,7 @@ html, body {
     line-height: 2rem;
   }
 }
+
 @media (min-width: 1024px) {
 
   .lg\:mt-0 {
@@ -1195,6 +1223,7 @@ html, body {
     grid-template-columns: 3fr 1fr;
   }
 }
+
 @media (min-width: 1280px) {
 
   .xl\:static {
@@ -1229,6 +1258,7 @@ html, body {
     flex-direction: row;
   }
 }
+
 @media (min-width: 1536px) {
 
   .\32xl\:h-\[342px\] {

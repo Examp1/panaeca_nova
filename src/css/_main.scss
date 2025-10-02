@@ -66,3 +66,12 @@ scroll-behavior: smooth;
    visibility: visible;
   }
 }
+#formBlock, #successBlock{
+  transition: all 0.5s ease-in-out;
+}
+
+.hide{
+  opacity: 0;
+  visibility: hidden;
+  max-height: 0;
+}
