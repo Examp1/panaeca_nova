@@ -472,18 +472,40 @@
         <!-- <img src="https://placehold.co/788x271" class="rounded-[32px]" alt=""> -->
       </div>
     </div>
+    <div
+      class="container mx-auto mt-8 border-t border-[#A2A2A2] flex justify-center items-center flex-col gap-6 lg:justify-between lg:flex-row pt-5">
+      <span class="text-[#A2A2A2] text-[13px]">Copyright © 2025</span>
+      <a class="text-[#A2A2A2] text-[13px] flex items-center gap-4" href="https://sidev.digital/" rel="follow"
+        target="_blank">Зроблено з любовʼю в Україні <img src="/img/sisi-logo.svg" alt=""></a>
+    </div>
   </footer>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBriosSEr1K3CPvPGJ9hd4aAI4fYnJxDuA&callback=initMap" async defer>
-  </script>
   <script>
-    function initMap() {
+    async function initMap() {
+      const { Map } = await google.maps.importLibrary("maps");
+
       const location = { lat: 50.39296067335859, lng: 30.495204750506787 };
-      const map = new google.maps.Map(document.getElementById("map"), {
+      const map = new Map(document.getElementById("map"), {
         zoom: 12,
         center: location,
       });
     }
+
+    window.addEventListener("load", () => {
+      if (window.google && google.maps) {
+        initMap();
+      } else {
+        const interval = setInterval(() => {
+          if (window.google && google.maps) {
+            clearInterval(interval);
+            initMap();
+          }
+        }, 100);
+      }
+    });
   </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBriosSEr1K3CPvPGJ9hd4aAI4fYnJxDuA&v=weekly" async
+    defer>
+    </script>
   <script src="https://unpkg.com/imask"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script type="module" src="./js/scripts.js"></script>
