@@ -7,7 +7,7 @@ window.addEventListener("DOMContentLoaded", () => {
         };
         phoneInputs.forEach((input) => {
             IMask(input, maskOptions);
-        })
+        });
     }
 
     const btnPrev = document.querySelector(".button-prev");
@@ -83,5 +83,22 @@ window.addEventListener("DOMContentLoaded", () => {
                 successBlock.classList.remove("hide").add("show");
             })
             .catch((err) => console.error("Ошибка:", err));
+    });
+
+    const tabButtons = document.querySelectorAll("[data-tab]");
+    const tabContents = document.querySelectorAll(".tab-content");
+    tabButtons.forEach((button) => {
+        button.addEventListener("click", ({target}) => {
+            tabButtons.forEach((btn) => {
+                btn.classList.remove('active_tab');
+            })
+            target.classList.add('active_tab');
+            const targetTab = button.getAttribute("data-tab");
+            const currentTabContent = document.querySelector(`#${targetTab}`);
+            tabContents.forEach((content) => {
+                content.classList.add('tab-hide')
+            })
+            currentTabContent.classList.remove('tab-hide');
+        });
     });
 });
