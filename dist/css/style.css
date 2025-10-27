@@ -803,10 +803,6 @@ select {
 .w-\[calc\(100\%-100px\)\] {
   width: calc(100% - 100px);
 }
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
 .w-full {
   width: 100%;
 }
@@ -867,9 +863,6 @@ select {
 }
 .overflow-hidden {
   overflow: hidden;
-}
-.overflow-x-auto {
-  overflow-x: auto;
 }
 .overflow-x-scroll {
   overflow-x: scroll;
@@ -1003,6 +996,10 @@ select {
   padding-top: 90px;
   padding-bottom: 90px;
 }
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
 .pb-\[18px\] {
   padding-bottom: 18px;
 }
@@ -1011,12 +1008,6 @@ select {
 }
 .pt-5 {
   padding-top: 1.25rem;
-}
-.pb-1 {
-  padding-bottom: 0.25rem;
-}
-.pb-10 {
-  padding-bottom: 2.5rem;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1260,11 +1251,6 @@ body {
     height: 206px;
   }
 
-  .lg\:w-fit {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-
   .lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1283,10 +1269,6 @@ body {
 
   .lg\:justify-between {
     justify-content: space-between;
-  }
-
-  .lg\:overflow-x-auto {
-    overflow-x: auto;
   }
 }
 
